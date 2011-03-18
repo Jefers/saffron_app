@@ -1,0 +1,734 @@
+/* incase an inverted custom gradient isn't specified */
+/* line 177, ../../../vendor/bundle/ruby/1.9.1/gems/fancy-buttons-1.0.6/lib/stylesheets/_fancy-buttons.sass */
+.fancy-button-reset-base-class, .button, input[type="submit"], button, .file_input_button {
+  font-family: "Lucida Grande", Lucida, Arial, sans-serif;
+  background: url('/images/button_bg.png?1298888701') repeat-x bottom left;
+  margin: 0;
+  width: auto;
+  overflow: visible;
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
+  border-style: solid;
+  font-weight: bold;
+}
+/* line 165, ../../../vendor/bundle/ruby/1.9.1/gems/fancy-buttons-1.0.6/lib/stylesheets/_fancy-buttons.sass */
+.fancy-button-reset-base-class::-moz-focus-inner, .button::-moz-focus-inner, input[type="submit"]::-moz-focus-inner, button::-moz-focus-inner, .file_input_button::-moz-focus-inner {
+  border: none;
+  padding: 0;
+}
+/* line 168, ../../../vendor/bundle/ruby/1.9.1/gems/fancy-buttons-1.0.6/lib/stylesheets/_fancy-buttons.sass */
+.fancy-button-reset-base-class:focus, .button:focus, input[type="submit"]:focus, button:focus, .file_input_button:focus {
+  outline: none;
+}
+
+/* line 2, ../../../app/stylesheets/custom.scss */
+* {
+  margin: 0;
+}
+
+/* Total width = (columns * 40) - 10 */
+/* line 68, ../../../app/stylesheets/custom.scss */
+body {
+  background: url(/images/body_background.png) repeat;
+}
+
+/* line 69, ../../../app/stylesheets/custom.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-weight: normal;
+}
+
+/* line 70, ../../../app/stylesheets/custom.scss */
+h1, h4 {
+  text-shadow: #aaaaaa 1px 1px 1px;
+  color: #fcd116;
+}
+
+/* line 71, ../../../app/stylesheets/custom.scss */
+h2, h3 {
+  text-shadow: #aaaaaa 1px 1px 1px;
+  color: #5bbf21;
+}
+
+/* line 72, ../../../app/stylesheets/custom.scss */
+header h1 {
+  -x-system-font: none;
+  color: #fcd116;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-size: 65px;
+  font-size-adjust: none;
+  font-stretch: normal;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  line-height: 1;
+  text-shadow: 0 -1px 0 black;
+  position: absolute;
+  top: 0.5em;
+  right: 9em;
+}
+
+/* line 90, ../../../app/stylesheets/custom.scss */
+html, body {
+  color: #ffe6ff;
+  font-family: "Museo Slab", "Helvetica", "Arial", sans-serif;
+  height: 100%;
+}
+
+/* line 96, ../../../app/stylesheets/custom.scss */
+#container {
+  overflow: hidden;
+  clear: both;
+  position: relative;
+  background: url(/images/container_background.png) repeat;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 105, ../../../app/stylesheets/custom.scss */
+#header {
+  overflow: hidden;
+  clear: both;
+  position: relative;
+  background: url(/images/header_background.png) repeat;
+}
+
+/* line 111, ../../../app/stylesheets/custom.scss */
+#logo {
+  position: relative;
+}
+
+/* line 115, ../../../app/stylesheets/custom.scss */
+#main {
+  overflow: hidden;
+  clear: both;
+  position: relative;
+  width: 960px;
+  background: url(/images/main_background.png) repeat;
+}
+
+/* line 123, ../../../app/stylesheets/custom.scss */
+#login_nav {
+  padding: 2px;
+}
+
+/* line 127, ../../../app/stylesheets/custom.scss */
+#footer {
+  overflow: hidden;
+  clear: both;
+  position: relative;
+  background: url(/images/footer_background.png) repeat;
+}
+
+/* line 133, ../../../app/stylesheets/custom.scss */
+.footer {
+  font-color: #ffe6ff;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 138, ../../../app/stylesheets/custom.scss */
+.footer nav {
+  float: none;
+}
+
+/* line 142, ../../../app/stylesheets/custom.scss */
+section {
+  font-size: 120%;
+}
+/* line 144, ../../../app/stylesheets/custom.scss */
+section h1 {
+  font-size: 200%;
+}
+/* line 146, ../../../app/stylesheets/custom.scss */
+section#flash {
+  height: 2em;
+  -moz-border-radius: 0.5em;
+  -webkit-border-radius: 0.5em;
+  -o-border-radius: 0.5em;
+  -ms-border-radius: 0.5em;
+  -khtml-border-radius: 0.5em;
+  border-radius: 0.5em;
+  margin: 0.25em;
+  padding: 0.5em;
+  background: #ff7c31;
+}
+
+/* Links */
+/* line 152, ../../../app/stylesheets/custom.scss */
+a {
+  color: #ffe6ff;
+  text-decoration: none;
+}
+/* line 154, ../../../app/stylesheets/custom.scss */
+a:hover {
+  color: white;
+  text-decoration: underline;
+}
+/* line 155, ../../../app/stylesheets/custom.scss */
+a:visited {
+  color: #ffe6ff;
+}
+
+/* Navigation */
+/* line 159, ../../../app/stylesheets/custom.scss */
+nav {
+  float: right;
+  white-space: nowrap;
+}
+/* line 162, ../../../app/stylesheets/custom.scss */
+nav ul {
+  margin: 0;
+  padding: 0;
+}
+/* line 165, ../../../app/stylesheets/custom.scss */
+nav ul li {
+  list-style-type: none;
+  display: inline-block;
+  padding: 0.2em 0;
+}
+/* line 169, ../../../app/stylesheets/custom.scss */
+nav ul li a {
+  padding: 0 5px;
+  font-weight: bold;
+}
+/* line 172, ../../../app/stylesheets/custom.scss */
+nav ul li a:visited {
+  color: #ffe6ff;
+}
+/* line 174, ../../../app/stylesheets/custom.scss */
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* line 177, ../../../app/stylesheets/custom.scss */
+#user_nav {
+  float: right;
+  font-size: 12px;
+}
+
+/* Sign up button */
+/* line 184, ../../../app/stylesheets/custom.scss */
+a.signup_button {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  text-align: center;
+  width: 190px;
+  color: #fff;
+  background: #006400;
+  font-size: 150%;
+  font-weight: bold;
+  padding: 20px;
+}
+
+/* line 196, ../../../app/stylesheets/custom.scss */
+#flash_notice, #flash_error, #flash_alert {
+  -moz-border-radius: 0.5em;
+  -webkit-border-radius: 0.5em;
+  -o-border-radius: 0.5em;
+  -ms-border-radius: 0.5em;
+  -khtml-border-radius: 0.5em;
+  border-radius: 0.5em;
+  margin: 0.25em;
+  padding: 0.5em;
+  background: #ff7c31;
+  -moz-box-shadow: 0 0 8px rgba(78, 78, 78, 0.5);
+  padding: 0;
+  padding-left: 10px;
+  margin: 0;
+  width: 99%;
+}
+
+/* line 204, ../../../app/stylesheets/custom.scss */
+#flash_notice {
+  background-color: #CFC;
+  border: solid 1px #6C6;
+}
+
+/* line 208, ../../../app/stylesheets/custom.scss */
+#flash_error {
+  background-color: #FCC;
+  border: solid 1px #C66;
+}
+
+/* line 212, ../../../app/stylesheets/custom.scss */
+#flash_alert {
+  background-color: #FFAB56;
+  border: solid 1px #C66;
+}
+
+/* line 216, ../../../app/stylesheets/custom.scss */
+.field_with_errors {
+  -moz-border-radius: 0.5em;
+  -webkit-border-radius: 0.5em;
+  -o-border-radius: 0.5em;
+  -ms-border-radius: 0.5em;
+  -khtml-border-radius: 0.5em;
+  border-radius: 0.5em;
+  margin: 0.25em;
+  padding: 0.5em;
+  background: #ff7c31;
+  -moz-box-shadow: 0 0 8px rgba(255, 22, 22, 0.5);
+  display: inline;
+}
+
+/* line 221, ../../../app/stylesheets/custom.scss */
+#error_explanation {
+  -moz-border-radius: 0.5em;
+  -webkit-border-radius: 0.5em;
+  -o-border-radius: 0.5em;
+  -ms-border-radius: 0.5em;
+  -khtml-border-radius: 0.5em;
+  border-radius: 0.5em;
+  margin: 0.25em;
+  padding: 0.5em;
+  background: #ff7c31;
+  -moz-box-shadow: 0 0 8px rgba(255, 22, 22, 0.5);
+  width: 99%;
+  border: 2px solid #ff1616;
+  padding: 0px;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+/* line 230, ../../../app/stylesheets/custom.scss */
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: 0;
+  background-color: #ff1616;
+  color: #fff;
+}
+/* line 238, ../../../app/stylesheets/custom.scss */
+#error_explanation p {
+  color: #333;
+  margin-bottom: 0;
+  padding: 8px;
+}
+/* line 242, ../../../app/stylesheets/custom.scss */
+#error_explanation ul {
+  margin: 2px 24px;
+}
+/* line 244, ../../../app/stylesheets/custom.scss */
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: disc;
+}
+
+/*Pagination*/
+/* line 251, ../../../app/stylesheets/custom.scss */
+.digg_pagination {
+  background: #ff7c31;
+  margin: 0;
+  /* self-clearing method: */
+}
+/* line 255, ../../../app/stylesheets/custom.scss */
+.digg_pagination a {
+  padding: .2em .5em;
+  display: block;
+  float: left;
+  margin-right: 1px;
+}
+/* line 260, ../../../app/stylesheets/custom.scss */
+.digg_pagination span {
+  padding: .2em .5em;
+  display: block;
+  float: left;
+  margin-right: 1px;
+}
+/* line 265, ../../../app/stylesheets/custom.scss */
+.digg_pagination span.disabled {
+  color: #999;
+  border: 1px solid #DDD;
+}
+/* line 268, ../../../app/stylesheets/custom.scss */
+.digg_pagination span.current {
+  margin-top: 1px;
+  font-weight: bold;
+  background: #642500;
+  color: white;
+  border: 2px solid #642500;
+}
+/* line 274, ../../../app/stylesheets/custom.scss */
+.digg_pagination a {
+  text-decoration: none;
+  color: #311200;
+  border: 1px solid #311200;
+}
+/* line 278, ../../../app/stylesheets/custom.scss */
+.digg_pagination a:hover, .digg_pagination a:focus {
+  color: black;
+  border-color: #ca4a00;
+}
+/* line 281, ../../../app/stylesheets/custom.scss */
+.digg_pagination .page_info {
+  background: #642500;
+  color: #ff7c31;
+  padding: .4em .6em;
+  width: 22em;
+  margin-bottom: .3em;
+  text-align: center;
+}
+/* line 288, ../../../app/stylesheets/custom.scss */
+.digg_pagination .page_info b {
+  color: #311200;
+  background: #ca4a00;
+  padding: .1em .25em;
+}
+/* line 292, ../../../app/stylesheets/custom.scss */
+.digg_pagination:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+/* line 300, ../../../app/stylesheets/custom.scss */
+* html .digg_pagination {
+  height: 1%;
+}
+/* line 302, ../../../app/stylesheets/custom.scss */
+*:first-child + html .digg_pagination {
+  overflow: hidden;
+}
+
+/* line 305, ../../../app/stylesheets/custom.scss */
+.date {
+  width: 8em;
+}
+
+/* line 309, ../../../app/stylesheets/custom.scss */
+.button {
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -o-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -khtml-border-radius: 6px;
+  border-radius: 6px;
+  font-size: 11px;
+  line-height: 1.2em;
+  padding: 0.3em 1em;
+  border-width: 1px;
+  background-color: #ca4a00;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #ffa673), color-stop(10%, #ff6c18), color-stop(50%, #bb4400), color-stop(50%, #ab3f00), color-stop(100%, #de5100));
+  background-image: -moz-linear-gradient(top, #ffa673 0%, #ff6c18 10%, #bb4400 50%, #ab3f00 50%, #de5100 100%);
+  background-image: linear-gradient(top, #ffa673 0%, #ff6c18 10%, #bb4400 50%, #ab3f00 50%, #de5100 100%);
+  border-color: #7e2e00;
+  text-shadow: #4b1b00 0px 1px 1px;
+  -moz-box-shadow: rgba(255, 255, 255, 0.396) 0 0 0.1em 1px inset;
+  -webkit-box-shadow: rgba(255, 255, 255, 0.396) 0 0 0.1em 1px inset;
+  -o-box-shadow: rgba(255, 255, 255, 0.396) 0 0 0.1em 1px inset;
+  box-shadow: rgba(255, 255, 255, 0.396) 0 0 0.1em 1px inset;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding;
+  -o-background-clip: padding-box;
+  -ms-background-clip: padding-box;
+  -khtml-background-clip: padding-box;
+  background-clip: padding-box;
+}
+/* line 116, ../../../vendor/bundle/ruby/1.9.1/gems/fancy-buttons-1.0.6/lib/stylesheets/_fancy-buttons.sass */
+.button, .button:visited {
+  color: white;
+}
+/* line 31, ../../../vendor/bundle/ruby/1.9.1/gems/fancy-buttons-1.0.6/lib/stylesheets/_fancy-buttons.sass */
+.button:hover, .button:focus {
+  background-color: #bb4400;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #ff9d64), color-stop(10%, #ff6308), color-stop(50%, #ab3f00), color-stop(50%, #9c3900), color-stop(100%, #cf4c00));
+  background-image: -moz-linear-gradient(top, #ff9d64 0%, #ff6308 10%, #ab3f00 50%, #9c3900 50%, #cf4c00 100%);
+  background-image: linear-gradient(top, #ff9d64 0%, #ff6308 10%, #ab3f00 50%, #9c3900 50%, #cf4c00 100%);
+  border-color: #6e2800;
+  text-shadow: #3b1600 0px 1px 1px;
+}
+/* line 116, ../../../vendor/bundle/ruby/1.9.1/gems/fancy-buttons-1.0.6/lib/stylesheets/_fancy-buttons.sass */
+.button:hover, .button:hover:visited, .button:focus, .button:focus:visited {
+  color: white;
+}
+/* line 36, ../../../vendor/bundle/ruby/1.9.1/gems/fancy-buttons-1.0.6/lib/stylesheets/_fancy-buttons.sass */
+.button:active {
+  background-color: #ab3f00;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #ab3f00), color-stop(30%, #b64300), color-stop(50%, #a13b00), color-stop(50%, #923500), color-stop(100%, #d44e00));
+  background-image: -moz-linear-gradient(top, #ab3f00 0%, #b64300 30%, #a13b00 50%, #923500 50%, #d44e00 100%);
+  background-image: linear-gradient(top, #ab3f00 0%, #b64300 30%, #a13b00 50%, #923500 50%, #d44e00 100%);
+  border-color: #5f2300;
+  text-shadow: #2c1000 0px -1px -1px;
+  -moz-box-shadow: #7e2e00 0 0.08em 0.1em 1px inset;
+  -webkit-box-shadow: #7e2e00 0 0.08em 0.1em 1px inset;
+  -o-box-shadow: #7e2e00 0 0.08em 0.1em 1px inset;
+  box-shadow: #7e2e00 0 0.08em 0.1em 1px inset;
+}
+/* line 116, ../../../vendor/bundle/ruby/1.9.1/gems/fancy-buttons-1.0.6/lib/stylesheets/_fancy-buttons.sass */
+.button:active, .button:active:visited {
+  color: white;
+}
+
+/* line 310, ../../../app/stylesheets/custom.scss */
+input[type="submit"] {
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -o-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -khtml-border-radius: 6px;
+  border-radius: 6px;
+  font-size: 11px;
+  line-height: 1.2em;
+  padding: 0.3em 1em;
+  border-width: 1px;
+  background-color: #ca4a00;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #ffa673), color-stop(10%, #ff6c18), color-stop(50%, #bb4400), color-stop(50%, #ab3f00), color-stop(100%, #de5100));
+  background-image: -moz-linear-gradient(top, #ffa673 0%, #ff6c18 10%, #bb4400 50%, #ab3f00 50%, #de5100 100%);
+  background-image: linear-gradient(top, #ffa673 0%, #ff6c18 10%, #bb4400 50%, #ab3f00 50%, #de5100 100%);
+  border-color: #7e2e00;
+  text-shadow: #4b1b00 0px 1px 1px;
+  -moz-box-shadow: rgba(255, 255, 255, 0.396) 0 0 0.1em 1px inset;
+  -webkit-box-shadow: rgba(255, 255, 255, 0.396) 0 0 0.1em 1px inset;
+  -o-box-shadow: rgba(255, 255, 255, 0.396) 0 0 0.1em 1px inset;
+  box-shadow: rgba(255, 255, 255, 0.396) 0 0 0.1em 1px inset;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding;
+  -o-background-clip: padding-box;
+  -ms-background-clip: padding-box;
+  -khtml-background-clip: padding-box;
+  background-clip: padding-box;
+}
+/* line 116, ../../../vendor/bundle/ruby/1.9.1/gems/fancy-buttons-1.0.6/lib/stylesheets/_fancy-buttons.sass */
+input[type="submit"], input[type="submit"]:visited {
+  color: white;
+}
+/* line 31, ../../../vendor/bundle/ruby/1.9.1/gems/fancy-buttons-1.0.6/lib/stylesheets/_fancy-buttons.sass */
+input[type="submit"]:hover, input[type="submit"]:focus {
+  background-color: #bb4400;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #ff9d64), color-stop(10%, #ff6308), color-stop(50%, #ab3f00), color-stop(50%, #9c3900), color-stop(100%, #cf4c00));
+  background-image: -moz-linear-gradient(top, #ff9d64 0%, #ff6308 10%, #ab3f00 50%, #9c3900 50%, #cf4c00 100%);
+  background-image: linear-gradient(top, #ff9d64 0%, #ff6308 10%, #ab3f00 50%, #9c3900 50%, #cf4c00 100%);
+  border-color: #6e2800;
+  text-shadow: #3b1600 0px 1px 1px;
+}
+/* line 116, ../../../vendor/bundle/ruby/1.9.1/gems/fancy-buttons-1.0.6/lib/stylesheets/_fancy-buttons.sass */
+input[type="submit"]:hover, input[type="submit"]:hover:visited, input[type="submit"]:focus, input[type="submit"]:focus:visited {
+  color: white;
+}
+/* line 36, ../../../vendor/bundle/ruby/1.9.1/gems/fancy-buttons-1.0.6/lib/stylesheets/_fancy-buttons.sass */
+input[type="submit"]:active {
+  background-color: #ab3f00;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #ab3f00), color-stop(30%, #b64300), color-stop(50%, #a13b00), color-stop(50%, #923500), color-stop(100%, #d44e00));
+  background-image: -moz-linear-gradient(top, #ab3f00 0%, #b64300 30%, #a13b00 50%, #923500 50%, #d44e00 100%);
+  background-image: linear-gradient(top, #ab3f00 0%, #b64300 30%, #a13b00 50%, #923500 50%, #d44e00 100%);
+  border-color: #5f2300;
+  text-shadow: #2c1000 0px -1px -1px;
+  -moz-box-shadow: #7e2e00 0 0.08em 0.1em 1px inset;
+  -webkit-box-shadow: #7e2e00 0 0.08em 0.1em 1px inset;
+  -o-box-shadow: #7e2e00 0 0.08em 0.1em 1px inset;
+  box-shadow: #7e2e00 0 0.08em 0.1em 1px inset;
+}
+/* line 116, ../../../vendor/bundle/ruby/1.9.1/gems/fancy-buttons-1.0.6/lib/stylesheets/_fancy-buttons.sass */
+input[type="submit"]:active, input[type="submit"]:active:visited {
+  color: white;
+}
+
+/* line 311, ../../../app/stylesheets/custom.scss */
+button {
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -o-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -khtml-border-radius: 6px;
+  border-radius: 6px;
+  font-size: 11px;
+  line-height: 1.2em;
+  padding: 0.3em 1em;
+  border-width: 1px;
+  background-color: #ca4a00;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #ffa673), color-stop(10%, #ff6c18), color-stop(50%, #bb4400), color-stop(50%, #ab3f00), color-stop(100%, #de5100));
+  background-image: -moz-linear-gradient(top, #ffa673 0%, #ff6c18 10%, #bb4400 50%, #ab3f00 50%, #de5100 100%);
+  background-image: linear-gradient(top, #ffa673 0%, #ff6c18 10%, #bb4400 50%, #ab3f00 50%, #de5100 100%);
+  border-color: #7e2e00;
+  text-shadow: #4b1b00 0px 1px 1px;
+  -moz-box-shadow: rgba(255, 255, 255, 0.396) 0 0 0.1em 1px inset;
+  -webkit-box-shadow: rgba(255, 255, 255, 0.396) 0 0 0.1em 1px inset;
+  -o-box-shadow: rgba(255, 255, 255, 0.396) 0 0 0.1em 1px inset;
+  box-shadow: rgba(255, 255, 255, 0.396) 0 0 0.1em 1px inset;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding;
+  -o-background-clip: padding-box;
+  -ms-background-clip: padding-box;
+  -khtml-background-clip: padding-box;
+  background-clip: padding-box;
+}
+/* line 116, ../../../vendor/bundle/ruby/1.9.1/gems/fancy-buttons-1.0.6/lib/stylesheets/_fancy-buttons.sass */
+button, button:visited {
+  color: white;
+}
+/* line 31, ../../../vendor/bundle/ruby/1.9.1/gems/fancy-buttons-1.0.6/lib/stylesheets/_fancy-buttons.sass */
+button:hover, button:focus {
+  background-color: #bb4400;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #ff9d64), color-stop(10%, #ff6308), color-stop(50%, #ab3f00), color-stop(50%, #9c3900), color-stop(100%, #cf4c00));
+  background-image: -moz-linear-gradient(top, #ff9d64 0%, #ff6308 10%, #ab3f00 50%, #9c3900 50%, #cf4c00 100%);
+  background-image: linear-gradient(top, #ff9d64 0%, #ff6308 10%, #ab3f00 50%, #9c3900 50%, #cf4c00 100%);
+  border-color: #6e2800;
+  text-shadow: #3b1600 0px 1px 1px;
+}
+/* line 116, ../../../vendor/bundle/ruby/1.9.1/gems/fancy-buttons-1.0.6/lib/stylesheets/_fancy-buttons.sass */
+button:hover, button:hover:visited, button:focus, button:focus:visited {
+  color: white;
+}
+/* line 36, ../../../vendor/bundle/ruby/1.9.1/gems/fancy-buttons-1.0.6/lib/stylesheets/_fancy-buttons.sass */
+button:active {
+  background-color: #ab3f00;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #ab3f00), color-stop(30%, #b64300), color-stop(50%, #a13b00), color-stop(50%, #923500), color-stop(100%, #d44e00));
+  background-image: -moz-linear-gradient(top, #ab3f00 0%, #b64300 30%, #a13b00 50%, #923500 50%, #d44e00 100%);
+  background-image: linear-gradient(top, #ab3f00 0%, #b64300 30%, #a13b00 50%, #923500 50%, #d44e00 100%);
+  border-color: #5f2300;
+  text-shadow: #2c1000 0px -1px -1px;
+  -moz-box-shadow: #7e2e00 0 0.08em 0.1em 1px inset;
+  -webkit-box-shadow: #7e2e00 0 0.08em 0.1em 1px inset;
+  -o-box-shadow: #7e2e00 0 0.08em 0.1em 1px inset;
+  box-shadow: #7e2e00 0 0.08em 0.1em 1px inset;
+}
+/* line 116, ../../../vendor/bundle/ruby/1.9.1/gems/fancy-buttons-1.0.6/lib/stylesheets/_fancy-buttons.sass */
+button:active, button:active:visited {
+  color: white;
+}
+
+/* line 315, ../../../app/stylesheets/custom.scss */
+.file_input_textbox {
+  width: 400px;
+  float: left;
+}
+
+/* line 320, ../../../app/stylesheets/custom.scss */
+.file_input_button {
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -o-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -khtml-border-radius: 6px;
+  border-radius: 6px;
+  font-size: 15px;
+  line-height: 1.2em;
+  padding: 0.3em 1em;
+  border-width: 1px;
+  background-color: #ca4a00;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #ffa673), color-stop(10%, #ff6c18), color-stop(50%, #bb4400), color-stop(50%, #ab3f00), color-stop(100%, #de5100));
+  background-image: -moz-linear-gradient(top, #ffa673 0%, #ff6c18 10%, #bb4400 50%, #ab3f00 50%, #de5100 100%);
+  background-image: linear-gradient(top, #ffa673 0%, #ff6c18 10%, #bb4400 50%, #ab3f00 50%, #de5100 100%);
+  border-color: #7e2e00;
+  text-shadow: #4b1b00 0px 1px 1px;
+  -moz-box-shadow: rgba(255, 255, 255, 0.396) 0 0 0.1em 1px inset;
+  -webkit-box-shadow: rgba(255, 255, 255, 0.396) 0 0 0.1em 1px inset;
+  -o-box-shadow: rgba(255, 255, 255, 0.396) 0 0 0.1em 1px inset;
+  box-shadow: rgba(255, 255, 255, 0.396) 0 0 0.1em 1px inset;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding;
+  -o-background-clip: padding-box;
+  -ms-background-clip: padding-box;
+  -khtml-background-clip: padding-box;
+  background-clip: padding-box;
+  margin-bottom: 30px;
+  margin-top: 7px;
+}
+/* line 116, ../../../vendor/bundle/ruby/1.9.1/gems/fancy-buttons-1.0.6/lib/stylesheets/_fancy-buttons.sass */
+.file_input_button, .file_input_button:visited {
+  color: white;
+}
+/* line 31, ../../../vendor/bundle/ruby/1.9.1/gems/fancy-buttons-1.0.6/lib/stylesheets/_fancy-buttons.sass */
+.file_input_button:hover, .file_input_button:focus {
+  background-color: #bb4400;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #ff9d64), color-stop(10%, #ff6308), color-stop(50%, #ab3f00), color-stop(50%, #9c3900), color-stop(100%, #cf4c00));
+  background-image: -moz-linear-gradient(top, #ff9d64 0%, #ff6308 10%, #ab3f00 50%, #9c3900 50%, #cf4c00 100%);
+  background-image: linear-gradient(top, #ff9d64 0%, #ff6308 10%, #ab3f00 50%, #9c3900 50%, #cf4c00 100%);
+  border-color: #6e2800;
+  text-shadow: #3b1600 0px 1px 1px;
+}
+/* line 116, ../../../vendor/bundle/ruby/1.9.1/gems/fancy-buttons-1.0.6/lib/stylesheets/_fancy-buttons.sass */
+.file_input_button:hover, .file_input_button:hover:visited, .file_input_button:focus, .file_input_button:focus:visited {
+  color: white;
+}
+/* line 36, ../../../vendor/bundle/ruby/1.9.1/gems/fancy-buttons-1.0.6/lib/stylesheets/_fancy-buttons.sass */
+.file_input_button:active {
+  background-color: #ab3f00;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #ab3f00), color-stop(30%, #b64300), color-stop(50%, #a13b00), color-stop(50%, #923500), color-stop(100%, #d44e00));
+  background-image: -moz-linear-gradient(top, #ab3f00 0%, #b64300 30%, #a13b00 50%, #923500 50%, #d44e00 100%);
+  background-image: linear-gradient(top, #ab3f00 0%, #b64300 30%, #a13b00 50%, #923500 50%, #d44e00 100%);
+  border-color: #5f2300;
+  text-shadow: #2c1000 0px -1px -1px;
+  -moz-box-shadow: #7e2e00 0 0.08em 0.1em 1px inset;
+  -webkit-box-shadow: #7e2e00 0 0.08em 0.1em 1px inset;
+  -o-box-shadow: #7e2e00 0 0.08em 0.1em 1px inset;
+  box-shadow: #7e2e00 0 0.08em 0.1em 1px inset;
+}
+/* line 116, ../../../vendor/bundle/ruby/1.9.1/gems/fancy-buttons-1.0.6/lib/stylesheets/_fancy-buttons.sass */
+.file_input_button:active, .file_input_button:active:visited {
+  color: white;
+}
+
+/* line 323, ../../../app/stylesheets/custom.scss */
+.file_input_div {
+  position: relative;
+  width: 100px;
+  height: 2.1em;
+  overflow: hidden;
+  display: inline;
+}
+
+/* line 332, ../../../app/stylesheets/custom.scss */
+.file_input_hidden {
+  font-size: 45px;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  opacity: 0;
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+}
+
+/* line 340, ../../../app/stylesheets/custom.scss */
+.checkbox {
+  color: #ffe6ff;
+  background: #ff7c31;
+  width: 2em;
+  height: 2em;
+}
+
+/* START: no script warning */
+/* line 348, ../../../app/stylesheets/custom.scss */
+.noscript {
+  background-color: #AE0000;
+  color: #FFFFFF;
+  font-size: 110%;
+  font-weight: bold;
+  left: 0;
+  padding-bottom: 5px;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 5px;
+  position: fixed;
+  text-align: center;
+  top: 0;
+  width: 100%;
+  z-index: 4101;
+}
+
+/* line 365, ../../../app/stylesheets/custom.scss */
+.noscript .noscript-inner {
+  text-align: center;
+  background-image: url("/images/i_notice.png");
+  background-position: 20px 50%;
+  background-repeat: no-repeat;
+  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  padding-bottom: 12px;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 12px;
+  width: 70%;
+}
+
+/* END:form */

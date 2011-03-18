@@ -1,0 +1,36 @@
+# Rails
+.bundle
+db/*.sqlite3
+db/*.sqlite3-journal
+log/*.log
+*.log
+tmp/**/*
+config/database.yml
+
+# Public Cache
+public/javascripts/cache
+public/stylesheets/cache
+
+# Public Uploads
+public/system/*
+public/themes/*
+public/pictures/*
+public/assets/*
+
+# Mac
+.DS_Store
+
+# sass
+.sass-cache
+.sass-cache/*
+
+#rvm
+.rvmrc
+.rvmrc.*
+
+# Vendor Cache
+vendor/cache
+
+#testing
+capybara*
+.autotest

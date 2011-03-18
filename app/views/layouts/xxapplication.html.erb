@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SaffronHosts</title>
+  <link rel="icon" href="/images/favicon.png" type="image/x-icon" />
+  <link rel="icon" href="/images/favicon.gif" type="image/x-icon" />
+  <%= javascript_include_tag :defaults, 'jquery-ui-1.8.10.custom.min', 'jquery.cycle2.88' %>
+  <%= csrf_meta_tag %>
+  <%= render 'layouts/stylesheets' %>
+</head>
+  <body>
+    <div id="container">
+      <div id="header">
+        <%= render 'layouts/header' %>
+      </div>
+
+      <div id="tab-container">
+        <ul>
+          <li><%= active_link_to "Home",       root_path, :active => { :when => :self_only } %></li>
+          <li><%= active_link_to "About us",   about_path %></li>
+          <li><%= active_link_to "Services",   services_path %></li>
+          <li><%= active_link_to "Contact us", contact_path %></li>
+        </ul>
+        <div id="content"  class="panel-container" class="tab-container">
+          <%= yield %>
+        </div>
+      </div>
+
+      <div id="footer">
+        Copyright © SaffronHosts, 2011
+      </div>
+      <div id="footer">                         <!-- START: footer -->
+        <%= render 'layouts/noscript' %>
+        <%= render 'layouts/footer' %>
+      </div>                                    <!-- END: footer -->
+    </div>
+  </body>
+</html>

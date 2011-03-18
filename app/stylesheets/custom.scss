@@ -1,0 +1,381 @@
+@import "fancy-buttons";
+* {
+margin: 0;
+}
+
+$sitewidth: 100%;    /* Total width = (columns * 40) - 10 */
+$site: #ca4a00;
+$font-color: #ffe6ff;
+$font-color1: #FCD116;
+$font-color2: #5BBF21;
+$font-family: "Museo Slab","Helvetica","Arial",sans-serif ;
+$font-funky: "Comic Sans MS",cursive,sans-serif;
+
+$font-size: 120%;
+$background: lighten($site, 20%);
+$bg: $background;
+$border: darken($site, 20%);
+$fontb: darken(#52C4E4, 10);
+$paginate: darken($site, 20%);
+
+$linkcolor: $font-color;
+$hover: lighten($font-color, 30%);
+$active: $font-color;
+$visited: $font-color;
+
+@mixin formInputs {
+  @include border-radius(5px);
+  margin-bottom: 1.5em;
+  background: $site;
+  /*font-family:comic sans MS;*/
+  font-size:14px;
+  font-weight:none;
+  font-style:normal;
+  border-style:solid;
+  border-color:$border;
+  border-width:2px;
+  width: 280px;
+  color:$font-color;
+}
+
+@mixin shadow_box {
+  background-color:darken($bg, 20%);
+  -moz-box-shadow:    5px 5px 3px #888888; /* Firefox */
+  -webkit-box-shadow: 5px 5px 3px #888888; /* Safari and Chrome */
+  box-shadow:         5px 5px 3px #888888;
+}
+
+@mixin rounded {
+  @include border-radius(0.5em);
+  margin:0.25em;
+  padding: 0.5em;
+  background: $bg;
+}
+
+@mixin grey_glow {
+  -moz-box-shadow:0 0 8px rgba(78, 78, 78, 0.5);
+}
+
+@mixin red_glow {
+  -moz-box-shadow:0 0 8px rgba(255, 22, 22, 0.5);
+}
+
+@mixin clearfix {
+  overflow: hidden;
+  clear: both;
+}
+
+body {background:url(/images/body_background.png) repeat; }
+h1, h2, h3, h4, h5, h6 {font-family: $font-funky; font-weight:normal;}
+h1, h4 {text-shadow: #aaaaaa 1px 1px 1px; color:$font-color1;}
+h2, h3 {text-shadow: #aaaaaa 1px 1px 1px; color:$font-color2;}
+header h1 {
+  -x-system-font: none;
+  color: $font-color1;
+  font-family: $font-funky;
+  font-size: 65px;
+  font-size-adjust: none;
+  font-stretch: normal;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  line-height: 1;
+  text-shadow: 0 -1px 0 black;
+  position: absolute;
+  top: 0.5em;
+  right: 9em;
+}
+
+//body {background: $site;color:$font-color ;font-family:"Helvetica Neue", Arial, Helvetica, sans-serif;}
+html, body {
+  color:$font-color ;
+  font-family: $font-family;
+  height: 100%;
+}
+
+#container {
+  @include clearfix;
+  position:relative;
+  background:url(/images/container_background.png) repeat;
+  width:100%;
+  margin: 0;
+  padding: 0;
+}
+
+#header {
+  @include clearfix;
+  position:relative;
+  background:url(/images/header_background.png) repeat;
+}
+
+#logo {
+  position:relative;
+}
+
+#main {
+  @include clearfix;
+  position:relative;
+  width: 960px;
+  background:url(/images/main_background.png) repeat;
+}
+
+
+#login_nav {
+  padding:2px;
+}
+
+#footer {
+  @include clearfix;
+  position:relative;
+  background:url(/images/footer_background.png) repeat;
+}
+
+.footer {
+  font-color: $font-color;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  nav {
+    float: none; }
+}
+
+section {
+  font-size: 120%;
+  h1 {
+    font-size: 200%; }
+  &#flash {
+    height: 2em;
+    @include rounded; } }
+
+/* Links */
+
+a {
+  color: $linkcolor; text-decoration: none;
+  &:hover { color: $hover; text-decoration: underline; }
+  &:visited { color: $visited; } }
+
+/* Navigation */
+
+nav {
+  float: right;
+  white-space: nowrap;
+  ul {
+    margin: 0;
+    padding: 0;
+    li {
+      list-style-type: none;
+      display: inline-block;
+      padding: 0.2em 0;
+      a {
+        padding: 0 5px;
+        font-weight: bold;
+        &:visited {
+          color: $visited; }
+        &:hover {
+          text-decoration: underline; } } } } }
+
+          #user_nav {
+            float: right;
+            font-size: 12px; }
+
+
+/* Sign up button */
+
+a.signup_button {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  text-align: center;
+  width: 190px;
+  color: #fff;
+  background: #006400;
+  font-size: 150%;
+  font-weight: bold;
+  padding: 20px; }
+
+#flash_notice, #flash_error, #flash_alert {
+  @include rounded;
+  @include grey_glow;
+  padding: 0;
+  padding-left: 10px;
+  margin: 0;
+  width: 99%; }
+
+#flash_notice {
+  background-color: #CFC;
+  border: solid 1px #6C6; }
+
+#flash_error {
+  background-color: #FCC;
+  border: solid 1px #C66; }
+
+#flash_alert {
+  background-color: #FFAB56;
+  border: solid 1px #C66; }
+
+.field_with_errors {
+  @include rounded;
+  @include red_glow;
+  display: inline; }
+
+#error_explanation {
+  @include rounded;
+  @include red_glow;
+  width: 99%;
+  border: 2px solid #ff1616;
+  padding: 0px;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+  h2 {
+    text-align: left;
+    font-weight: bold;
+    padding: 5px 5px 5px 15px;
+    font-size: 12px;
+    margin: 0;
+    background-color: #ff1616;
+    color: #fff; }
+  p {
+    color: #333;
+    margin-bottom: 0;
+    padding: 8px; }
+  ul {
+    margin: 2px 24px;
+    li {
+      font-size: 12px;
+      list-style: disc; } } }
+
+
+/*Pagination*/
+
+.digg_pagination {
+  background: $bg;
+  margin:0;
+  /* self-clearing method: */
+  a {
+    padding: .2em .5em;
+    display: block;
+    float: left;
+    margin-right: 1px; }
+  span {
+    padding: .2em .5em;
+    display: block;
+    float: left;
+    margin-right: 1px;
+    &.disabled {
+      color: #999;
+      border: 1px solid #DDD; }
+    &.current {
+      margin-top: 1px;
+      font-weight: bold;
+      background: $paginate;
+      color: white;
+      border: 2px solid $paginate; } }
+  a {
+    text-decoration: none;
+    color: darken($paginate, 10%);
+    border: 1px solid darken($paginate, 10%);
+    &:hover, &:focus {
+      color: darken($paginate, 20%);
+      border-color: lighten($paginate, 20%); } }
+  .page_info {
+    background: $paginate;
+    color: $bg;
+    padding: .4em .6em;
+    width: 22em;
+    margin-bottom: .3em;
+    text-align: center;
+    b {
+      color: darken($paginate, 10%);
+      background: lighten($paginate, 20%);
+      padding: .1em .25em; } }
+  &:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden; } }
+
+* {
+  html .digg_pagination {
+    height: 1%; }
+  &:first-child+html .digg_pagination {
+    overflow: hidden; } }
+
+.date {
+  width: 8em;
+}
+
+.button {@include fancy-button($site, 11px); }
+input[type="submit"]{@include fancy-button($site, 11px); }
+button {@include fancy-button($site, 11px); }
+
+
+.file_input_textbox
+{
+  width: 400px;
+  float: left;
+}
+
+.file_input_button {@include fancy-button($site, 15px);  margin-bottom: 30px; margin-top: 7px; }
+
+.file_input_div
+{
+  position: relative;
+  width: 100px;
+  height: 2.1em;
+  overflow: hidden;
+  display: inline
+}
+
+.file_input_hidden
+{
+  font-size: 45px;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  @include transparent
+}
+
+.checkbox {
+  color:$font-color;
+  background:$bg;
+  width:2em;
+  height:2em;
+}
+
+/* START: no script warning */
+.noscript  {
+  background-color:#AE0000;
+  color:#FFFFFF;
+  font-size:110%;
+  font-weight:bold;
+  left:0;
+  padding-bottom:5px;
+  padding-left:0;
+  padding-right:0;
+  padding-top:5px;
+  position:fixed;
+  text-align:center;
+  top:0;
+  width:100%;
+  z-index:4101;
+}
+
+.noscript .noscript-inner  {
+  text-align:center;
+  background-image:url("/images/i_notice.png");
+  background-position:20px 50%;
+  background-repeat:no-repeat;
+  margin-bottom:0;
+  margin-left:auto;
+  margin-right:auto;
+  margin-top:0;
+  padding-bottom:12px;
+  padding-left:0;
+  padding-right:0;
+  padding-top:12px;
+  width:70%;
+}
+/* END:form */
+

@@ -1,0 +1,14 @@
+<header class="header">
+   <%= link_to logo, root_path, :class => "button", :id => "logo" %>
+   <%= image_tag("banner.png", :id => "banner")  %>
+   <nav id="login_nav">
+     <% if current_user.try(:admin?) %>
+       <%= link_to "Pages", pages_path %> |
+     <% end %>
+     <% if user_signed_in? %>
+       Signed in as <%= current_user.email %>. Not you?
+       <%= link_to "Sign out", destroy_user_session_path %>
+     <% else %>
+       <%= link_to "Sign up", new_user_registration_path %> or <%= link_to "sign in", new_user_session_path %>
+     <% end %>   </nav>
+</header>

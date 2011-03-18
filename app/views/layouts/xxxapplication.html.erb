@@ -1,0 +1,27 @@
+ <!DOCTYPE html>
+<html>
+  <head>
+    <title>SaffronHosts</title>
+    <link rel="icon" href="/images/favicon.png" type="image/x-icon" />
+    <link rel="icon" href="/images/favicon.gif" type="image/x-icon" />
+    <%= javascript_include_tag :defaults, 'jquery-ui-1.8.10.custom.min', 'autocomplete-rails', 'jquery.cookie' %>
+    <%= csrf_meta_tag %>
+    <%= render 'layouts/stylesheets' %>
+  </head>
+  <body>
+
+    <div id="container">                      <!-- START: container -->
+      <div id="header">                       <!-- START: header -->
+      <%= render 'layouts/header' %>
+      </div>                                  <!-- END: header -->
+      <div id="main">                         <!-- START: main -->
+          <%= yield %>
+      </div>                                  <!-- END: main -->
+    </div>                                    <!-- END: container -->
+    <div id="footer">                         <!-- START: footer -->
+      <%= render 'layouts/noscript' %>
+      <%= render 'layouts/footer' %>
+    </div>                                    <!-- END: footer -->
+
+  </body>
+</html>
