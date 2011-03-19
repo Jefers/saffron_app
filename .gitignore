@@ -1,5 +1,4 @@
 # Rails
-.bundle
 db/*.sqlite3
 db/*.sqlite3-journal
 log/*.log
@@ -12,9 +11,8 @@ public/javascripts/cache
 public/stylesheets/cache
 
 # Public Uploads
-public/system/*
-public/themes/*
-public/pictures/*
+#public/system/*
+#public/themes/*
 public/assets/*
 
 # Mac
@@ -29,8 +27,8 @@ public/assets/*
 .rvmrc.*
 
 # Vendor Cache
-vendor/cache
+
 
 #testing
-capybara*
+#capybara*
 .autotest
