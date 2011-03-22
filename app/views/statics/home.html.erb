@@ -7,3 +7,11 @@
     <%= image_tag("nodelay.png") %>
   </div>
 </div>
+
+<% if current_user.try(:admin?) %>
+  <%= link_to 'Enquiries', enquiries_path %>
+<% else %>
+  <% if user_signed_in? %>
+    <%= link_to 'Create a new Enquiry', new_enquiry_path %>
+  <% end %>
+<% end %>

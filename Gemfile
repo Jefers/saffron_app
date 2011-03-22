@@ -8,6 +8,7 @@ gem 'rails', '3.0.4'
 gem 'mysql2'
 gem "haml-rails"
 gem 'devise', '~>1.1.5'
+gem 'cancan'
 #gem "paperclip", "~> 2.3"
 gem 'kaminari'
 gem 'jquery-rails'

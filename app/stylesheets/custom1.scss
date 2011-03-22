@@ -15,7 +15,7 @@ $font-funky: "Arial Rounded MT","Helvetica",cursive,sans-serif;
 $font-size: 100%;
 $background: #ffe6ff;
 $bg: $background;
-$border: darken($site, 20%);
+$border: darken($site, 5%);
 $fontb: darken(#52C4E4, 10);
 $paginate: darken($site, 20%);
 
@@ -23,6 +23,21 @@ $linkcolor: $font-color;
 $hover: #0e2346;
 $active: $font-color;
 $visited: $font-color;
+
+/* Mixins */
+@mixin formInputs {
+  @include border-radius(5px);
+  margin-bottom: 0.5em;
+  background: #eaf6ea;
+  color:#036103;
+  font-size:14px;
+  font-weight:none;
+  font-style:normal;
+  border-style:solid;
+  border-color:$border;
+  border-width:3px;
+  height:2em;
+}
 
 @mixin shadow_box {
   background-color:darken($bg, 20%);
@@ -50,6 +65,7 @@ $visited: $font-color;
   overflow: hidden;
   clear: both;
 }
+
 
 html, body {
   color:$font-color ;
@@ -139,9 +155,19 @@ h2, h3 {text-shadow: #aaaaaa 1px 1px 1px; color:$font-color2;}
     float: none; }
 }
 
-
+/*fancy input search*/
+input[type="password"], input[type="text"], input[type="file"], input[type="email"], input[type="tel"], textarea {
+  @include formInputs;
+  @include grey_glow;
+  font-family: $font-family;
+  font-size: $font-size;
+}
+textarea {
+  height: 6em;
+  width: 500px;
+}
 /* Buttons */
-input[type="submit"]{@include fancy-button($site, 13px); }
+input[type="submit"]{@include fancy-button($site, 17px); padding: 0.5em; }
 button {@include fancy-button($site, 13px); }
 /* Navigation */
 
@@ -153,9 +179,7 @@ a {
   &:visited { color: $visited; text-decoration: none; } }
 
 a.button{
-  @include fancy-button($site, 11px); padding: 0.5em;
-  &:hover { color: white; background: $hover; text-decoration: none; padding: 0.5em; }
-  &:visited { color: $visited; } }
+  @include fancy-button($site, 11px); padding: 0.5em; }
 
 nav {
   float: right;
@@ -209,13 +233,10 @@ border:none;
 }
 
 /* table-less forms */
-#new_enquiry {
-  height: 1200px;
-  width: 700px;
-  padding:10px;
-  border: solid 1px #fff;
-}
 
+div.field_hidden input {
+  display:none;
+  }
 /*div.field {
   clear: both;
   padding-top: 10px;
@@ -306,9 +327,14 @@ tbody tr:nth-child(even) td, tbody tr.even td {background:lighten($site, 15%);}
   -webkit-border-radius: 5px;
   border-radius: 5px; }
 
+#flash div {
+  height: 30px;
+}
+
 #flash_notice, #flash_error, #flash_alert {
   @include rounded;
   @include grey_glow;
+  color: #000;
   padding: 0;
   padding-left: 10px;
   margin: 0;
@@ -327,6 +353,8 @@ tbody tr:nth-child(even) td, tbody tr.even td {background:lighten($site, 15%);}
   border: solid 1px #C66; }
 
 .field_with_errors {
+  @include rounded;
+  @include red_glow;
   border: 5px solid #ff1616;
   background-color: #ff1616;
   color: #fff;
