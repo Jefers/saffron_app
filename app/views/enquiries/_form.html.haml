@@ -5,7 +5,8 @@
       %ul
         - @enquiry.errors.full_messages.each do |msg|
           %li= msg
-
+  .field_hidden
+    = f.text_field :user_id, :value => current_user.id
   .field
     = f.label :title
     %br/
@@ -47,14 +48,14 @@
     %br/
     = f.text_area :message, :cols => 45, :rows => 10
   .field
-    = f.label :domain_name_required
     = f.check_box :domain_name_required
+    = f.label :domain_name_required
   .field
-    = f.label :website_hosting_required
     = f.check_box :website_hosting_required
+    = f.label :website_hosting_required
   .field
-    = f.label :website_development_needed
     = f.check_box :website_development_needed
+    = f.label :website_development_needed
 
   .actions
     = f.submit 'Save'

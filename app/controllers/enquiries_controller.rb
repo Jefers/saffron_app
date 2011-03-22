@@ -1,10 +1,15 @@
 class EnquiriesController < ApplicationController
+  load_and_authorize_resource
   before_filter :authenticate_user!, :except => [:new]
   # GET /enquiries
   # GET /enquiries.xml
   def index
-    @enquiries = Enquiry.all
 
+    if current_user.admin?
+      @enquiries = Enquiry.all
+    else
+      @enquiries = Enquiry.by_user(current_user)
+    end
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @enquiries }
@@ -14,8 +19,6 @@ class EnquiriesController < ApplicationController
   # GET /enquiries/1
   # GET /enquiries/1.xml
   def show
-    @enquiry = Enquiry.find(params[:id])
-
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @enquiry }
@@ -25,7 +28,6 @@ class EnquiriesController < ApplicationController
   # GET /enquiries/new
   # GET /enquiries/new.xml
   def new
-    @enquiry = Enquiry.new
 
     respond_to do |format|
       format.html # new.html.erb
@@ -35,17 +37,15 @@ class EnquiriesController < ApplicationController
 
   # GET /enquiries/1/edit
   def edit
-    @enquiry = Enquiry.find(params[:id])
   end
 
   # POST /enquiries
   # POST /enquiries.xml
   def create
-    @enquiry = Enquiry.new(params[:enquiry])
 
     respond_to do |format|
       if @enquiry.save
-        format.html { redirect_to(@enquiry, :notice => 'Enquiry was successfully created.') }
+        format.html { redirect_to(root_path, :notice => 'Enquiry was successfully created.') }
         format.xml  { render :xml => @enquiry, :status => :created, :location => @enquiry }
       else
         format.html { render :action => "new" }
@@ -57,11 +57,10 @@ class EnquiriesController < ApplicationController
   # PUT /enquiries/1
   # PUT /enquiries/1.xml
   def update
-    @enquiry = Enquiry.find(params[:id])
 
     respond_to do |format|
       if @enquiry.update_attributes(params[:enquiry])
-        format.html { redirect_to(root_path, :notice => 'Enquiry was successfully updated.') }
+        format.html { redirect_to(@enquiry, :notice => 'Enquiry was successfully updated.') }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
@@ -73,7 +72,6 @@ class EnquiriesController < ApplicationController
   # DELETE /enquiries/1
   # DELETE /enquiries/1.xml
   def destroy
-    @enquiry = Enquiry.find(params[:id])
     @enquiry.destroy
 
     respond_to do |format|
