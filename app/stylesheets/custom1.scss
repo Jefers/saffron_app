@@ -1,4 +1,5 @@
 @import "fancy-buttons";
+
 * {
 margin: 0;
 }
@@ -19,7 +20,7 @@ $fontb: darken(#52C4E4, 10);
 $paginate: darken($site, 20%);
 
 $linkcolor: $font-color;
-$hover: #da4f00;
+$hover: #0e2346;
 $active: $font-color;
 $visited: $font-color;
 
@@ -98,7 +99,8 @@ h2, h3 {text-shadow: #aaaaaa 1px 1px 1px; color:$font-color2;}
 
 #content
 {
-  background:url(/images/main_background.png) repeat;
+//  background:url(/images/main_background.png) repeat;
+  background-color:$site;
   clear: left;
   padding: 20px;
 }
@@ -146,9 +148,9 @@ button {@include fancy-button($site, 13px); }
 /* Links */
 a {
   color: $linkcolor; text-decoration: none;
-  &:hover { color: $hover; text-decoration: underline; }
-  &:active { color: $hover; }
-  &:visited { color: $visited; } }
+  &:hover { color: $hover; text-decoration: none; }
+  &:active { color: $hover; text-decoration: none; }
+  &:visited { color: $visited; text-decoration: none; } }
 
 a.button{
   @include fancy-button($site, 11px); padding: 0.5em;
@@ -178,3 +180,181 @@ nav {
 .slideshow img { padding: 0; background-color: $site; }
 
 
+#signup {
+height:125px;
+right:62px;
+position:relative;
+bottom:0px;
+width:125px;
+border:none;
+}
+
+#signup a {
+  background-image:url("../../images/signup_button.png");
+  background-position:left 0;
+  font-size:1px;
+  overflow-x:hidden;
+  overflow-y:hidden;
+  padding-top:125px;
+  position:absolute;
+  top:0;
+  width:125px;
+  outline: none;
+}
+
+#signup a:hover {
+  background-image:url("../../images/signup_button.png");
+  background-position:left -125px;
+  background-repeat:no-repeat;
+}
+
+/* table-less forms */
+#new_enquiry {
+  height: 1200px;
+  width: 700px;
+  padding:10px;
+  border: solid 1px #fff;
+}
+
+/*div.field {
+  clear: both;
+  padding-top: 10px;
+  }
+
+div.field label {
+  float: left;
+  width: 250px;
+  text-align: right;
+  }
+
+div.field input {
+  float: right;
+  height:2em;
+  text-align: left;
+  }
+
+div.field textarea {
+  float: right;
+  text-align: left;
+  }
+
+div.field input[type="checkbox"] {
+  float: left;
+  width: 50px;
+  text-align: left;
+  }
+
+div.actions input[type="submit"] {
+  float: right;
+  text-align: left;
+  }  */
+
+  /*Pretty table*/
+
+table.pretty {
+  border-collapse: collapse;
+  margin-bottom: 10px; }
+
+.pretty {
+  th {
+    padding: 4px 10px;
+    border-bottom-color: $border;
+    border-bottom-style: solid;
+    border-bottom-width: medium;
+  }
+  td {
+    padding: 4px 10px;
+    border: solid 1px $border; }
+  .hidden {
+    border: hidden;
+    border-top: solid 1px $border;
+    border-right: solid 1px $border;
+    text-align: right;
+    background:lighten($site, 40%) }
+  .price {
+    text-align: right; }
+  .total {
+    text-align: right;
+    border-top-color: $border;
+    border-top-style: double;
+    border-top-width: thick;
+
+     }
+  th {
+    .current {
+      padding-right: 18px;
+      background-repeat: no-repeat;
+      background-position: right center; }
+    .asc:after {
+      content: "\25B2 \ ";text-shadow: #aaaaaa 1px 1px 1px;
+       }
+    .desc:after {
+      content: "\25BC \ ";text-shadow: #aaaaaa 1px 1px 1px;
+      }
+       } }
+
+tbody tr:nth-child(even) td, tbody tr.even td {background:lighten($site, 15%);}
+
+
+/* extras */
+.upper { text-transform: uppercase; }
+
+/* Round corners */
+
+.round {
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px; }
+
+#flash_notice, #flash_error, #flash_alert {
+  @include rounded;
+  @include grey_glow;
+  padding: 0;
+  padding-left: 10px;
+  margin: 0;
+  width: 99%; }
+
+#flash_notice {
+  background-color: #CFC;
+  border: solid 1px #6C6; }
+
+#flash_error {
+  background-color: #FCC;
+  border: solid 1px #C66; }
+
+#flash_alert {
+  background-color: #FFAB56;
+  border: solid 1px #C66; }
+
+.field_with_errors {
+  border: 5px solid #ff1616;
+  background-color: #ff1616;
+  color: #fff;
+  display: inline; }
+
+#error_explanation {
+  @include rounded;
+  @include red_glow;
+  width: 99%;
+  border: 2px solid #ff1616;
+  padding: 0px;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  background-color: $site;
+  h2 {
+    text-align: left;
+    font-weight: bold;
+    padding: 5px 5px 5px 15px;
+    font-size: $font-size +10;
+    margin: 0;
+    background-color: #ff1616;
+    color: #fff; }
+  p {
+    color: #333;
+    margin-bottom: 0;
+    padding: 8px; }
+  ul {
+    margin: 2px 24px;
+    li {
+      font-size: $font-size;
+      list-style: disc; } } }

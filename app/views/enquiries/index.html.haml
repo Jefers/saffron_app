@@ -1,0 +1,49 @@
+%h1 Listing enquiries
+
+%table
+  %tr
+    %th User
+    %th Title
+    %th First name
+    %th Last name
+    %th Address
+    %th Address 2
+    %th Address 3
+    %th Town
+    %th Post code
+    %th Contact telephone
+    %th Email address
+    %th Domain name required
+    %th Website hosting required
+    %th Website development needed
+    %th Message
+    %th Active
+    %th
+    %th
+    %th
+
+  - @enquiries.each do |enquiry|
+    %tr
+      %td= enquiry.user_id
+      %td= enquiry.title
+      %td= enquiry.first_name
+      %td= enquiry.last_name
+      %td= enquiry.address
+      %td= enquiry.address_2
+      %td= enquiry.address_3
+      %td= enquiry.town
+      %td= enquiry.post_code
+      %td= enquiry.contact_telephone
+      %td= enquiry.email_address
+      %td= enquiry.domain_name_required
+      %td= enquiry.website_hosting_required
+      %td= enquiry.website_development_needed
+      %td= enquiry.message
+      %td= enquiry.active
+      %td= link_to 'Show', enquiry
+      %td= link_to 'Edit', edit_enquiry_path(enquiry)
+      %td= link_to 'Destroy', enquiry, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Enquiry', new_enquiry_path

@@ -1,5 +1,10 @@
 SaffronApp::Application.routes.draw do
-  devise_for :users
+  resources :enquiries
+
+  devise_for :users do
+   get 'users', :to => 'enquiries#new', :as => :user_root # Rails 3
+  end
+
 
   resources :pages
 

@@ -1,0 +1,54 @@
+%p#notice= notice
+
+%p
+  %b User:
+  = @enquiry.user_id
+%p
+  %b Title:
+  = @enquiry.title
+%p
+  %b First name:
+  = @enquiry.first_name
+%p
+  %b Last name:
+  = @enquiry.last_name
+%p
+  %b Address:
+  = @enquiry.address
+%p
+  %b Address 2:
+  = @enquiry.address_2
+%p
+  %b Address 3:
+  = @enquiry.address_3
+%p
+  %b Town:
+  = @enquiry.town
+%p
+  %b Post code:
+  = @enquiry.post_code
+%p
+  %b Contact telephone:
+  = @enquiry.contact_telephone
+%p
+  %b Email address:
+  = @enquiry.email_address
+%p
+  %b Domain name required:
+  = @enquiry.domain_name_required
+%p
+  %b Website hosting required:
+  = @enquiry.website_hosting_required
+%p
+  %b Website development needed:
+  = @enquiry.website_development_needed
+%p
+  %b Message:
+  = @enquiry.message
+%p
+  %b Active:
+  = @enquiry.active
+
+= link_to 'Edit', edit_enquiry_path(@enquiry)
+\|
+= link_to 'Back', enquiries_path

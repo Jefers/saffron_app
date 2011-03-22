@@ -10,7 +10,28 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110317083916) do
+ActiveRecord::Schema.define(:version => 20110321115148) do
+
+  create_table "enquiries", :force => true do |t|
+    t.integer  "user_id"
+    t.string   "title"
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "address"
+    t.string   "address_2"
+    t.string   "address_3"
+    t.string   "town"
+    t.string   "post_code"
+    t.string   "contact_telephone"
+    t.string   "email_address"
+    t.boolean  "domain_name_required"
+    t.boolean  "website_hosting_required"
+    t.boolean  "website_development_needed"
+    t.text     "message"
+    t.boolean  "active"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "pages", :force => true do |t|
     t.string   "link",       :limit => 20
