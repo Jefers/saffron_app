@@ -6,8 +6,8 @@ margin: 0;
 
 $sitewidth: 960px;    /* Total width = (columns * 40) - 10 */
 $site: #6f9a06;
-$font-color: #ffe6ff;
-$font-color1: #FCD116;
+$font-color: #e6ffe6;
+$font-color1: #236805; //#FCD116;
 $font-color2: #5BBF21;
 $font-family: "Museo Slab","Helvetica","Arial",sans-serif ;
 $font-funky: "Arial Rounded MT","Helvetica",cursive,sans-serif;
@@ -19,10 +19,15 @@ $border: darken($site, 5%);
 $fontb: darken(#52C4E4, 10);
 $paginate: darken($site, 20%);
 
-$linkcolor: $font-color;
-$hover: #0e2346;
-$active: $font-color;
-$visited: $font-color;
+$linkcolor: #f6e312;
+$hover: complement($linkcolor); //darken($linkcolor, 30%); //adjust-hue($linkcolor, 180deg); //complement($linkcolor);
+$active: $hover;
+$visited: $linkcolor;
+$todo: complement(#da4f00);  //e6ffe6
+$toda: adjust-hue(#da4f00, 90deg);
+#toda{ color: $toda;}
+#todo{ color: $todo;}
+#hova{ color: $hover;}
 
 /* Mixins */
 @mixin formInputs {
@@ -66,7 +71,6 @@ $visited: $font-color;
   clear: both;
 }
 
-
 html, body {
   color:$font-color ;
   font-family: $font-family;
@@ -106,12 +110,12 @@ h2, h3 {text-shadow: #aaaaaa 1px 1px 1px; color:$font-color2;}
 
 #header h1 { margin: 0; }
 
-#navigation{ float: left; width: $sitewidth; background:#333; }
+#navigation { float: left; width: $sitewidth; background:#333; }
 #navigation ul{ margin: 0; padding: 0;}
 #navigation ul li{ list-style-type: none; display: inline;}
 #navigation li a { display: block; float: left; padding: 5px 10px; color:#fff; text-decoration: none; border-right: 1px solid#fff; }
-#navigation li a:hover { background:$site; &:active { background:$site; }}
-#navigation ul li a.active { background: $site; font-weight: bold; }
+#navigation li a:hover { background:$site;; text-shadow: $hover 1px 1px 1px; &:active { background:$site; }}
+#navigation ul li a.active { background: $site; font-weight: bold; text-shadow: #000 1px 1px 1px; }
 
 #content
 {
@@ -140,7 +144,6 @@ h2, h3 {text-shadow: #aaaaaa 1px 1px 1px; color:$font-color2;}
 #login_nav {
   position: absolute;
   top: 0px;
-  right: 185px;
   padding:2px;
   font-size: $font-size - 20;
 }
@@ -172,11 +175,11 @@ button {@include fancy-button($site, 13px); }
 /* Navigation */
 
 /* Links */
+
 a {
   color: $linkcolor; text-decoration: none;
-  &:hover { color: $hover; text-decoration: none; }
-  &:active { color: $hover; text-decoration: none; }
-  &:visited { color: $visited; text-decoration: none; } }
+  &:hover { color: $hover; text-decoration: underline; }
+  &:visited { color: $visited; } }
 
 a.button{
   @include fancy-button($site, 11px); padding: 0.5em; }
@@ -197,6 +200,7 @@ nav {
         &:visited {
           color: $visited; }
         &:hover {
+          color: $hover;
           text-decoration: underline; } } } } }
 
 /* rotator */
@@ -205,12 +209,12 @@ nav {
 
 
 #signup {
-height:125px;
-right:62px;
-position:relative;
-bottom:0px;
-width:125px;
-border:none;
+  height:125px;
+  right:62px;
+  position:relative;
+  bottom:0px;
+  width:125px;
+  border:none;
 }
 
 #signup a {
@@ -236,7 +240,7 @@ border:none;
 
 div.field_hidden input {
   display:none;
-  }
+}
 /*div.field {
   clear: both;
   padding-top: 10px;

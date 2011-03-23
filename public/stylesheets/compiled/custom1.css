@@ -28,90 +28,105 @@
 }
 
 /* Total width = (columns * 40) - 10 */
+/* line 28, ../../../app/stylesheets/custom1.scss */
+#toda {
+  color: #1eda00;
+}
+
+/* line 29, ../../../app/stylesheets/custom1.scss */
+#todo {
+  color: #008bda;
+}
+
+/* line 30, ../../../app/stylesheets/custom1.scss */
+#hova {
+  color: #1225f6;
+}
+
 /* Mixins */
-/* line 70, ../../../app/stylesheets/custom1.scss */
+/* line 74, ../../../app/stylesheets/custom1.scss */
 html, body {
-  color: #ffe6ff;
+  color: #e6ffe6;
   font-family: "Museo Slab", "Helvetica", "Arial", sans-serif;
   font-size: 100%;
   height: 100%;
 }
 
-/* line 77, ../../../app/stylesheets/custom1.scss */
+/* line 81, ../../../app/stylesheets/custom1.scss */
 body {
   background: url(/images/body_background.png) repeat;
 }
 
-/* line 78, ../../../app/stylesheets/custom1.scss */
+/* line 82, ../../../app/stylesheets/custom1.scss */
 h1, h2, h3, h4, h5, h6 {
   font-family: "Arial Rounded MT", "Helvetica", cursive, sans-serif;
   font-weight: normal;
 }
 
-/* line 79, ../../../app/stylesheets/custom1.scss */
+/* line 83, ../../../app/stylesheets/custom1.scss */
 h1, h4 {
   text-shadow: #aaaaaa 1px 1px 1px;
-  color: #fcd116;
+  color: #236805;
 }
 
-/* line 80, ../../../app/stylesheets/custom1.scss */
+/* line 84, ../../../app/stylesheets/custom1.scss */
 h2, h3 {
   text-shadow: #aaaaaa 1px 1px 1px;
   color: #5bbf21;
 }
 
-/* line 83, ../../../app/stylesheets/custom1.scss */
+/* line 87, ../../../app/stylesheets/custom1.scss */
 #container {
   margin: 0 auto;
   width: 960px;
   background: #fff;
 }
 
-/* line 90, ../../../app/stylesheets/custom1.scss */
+/* line 94, ../../../app/stylesheets/custom1.scss */
 #header {
   background: url(/images/header_background.png) repeat;
   padding: 20px;
 }
 
-/* line 95, ../../../app/stylesheets/custom1.scss */
+/* line 99, ../../../app/stylesheets/custom1.scss */
 #logo {
   position: relative;
   top: 0px;
   left: 0px;
 }
 
-/* line 101, ../../../app/stylesheets/custom1.scss */
+/* line 105, ../../../app/stylesheets/custom1.scss */
 #banner {
   position: relative;
   top: 8px;
   left: 0px;
 }
 
-/* line 107, ../../../app/stylesheets/custom1.scss */
+/* line 111, ../../../app/stylesheets/custom1.scss */
 #header h1 {
   margin: 0;
 }
 
-/* line 109, ../../../app/stylesheets/custom1.scss */
+/* line 113, ../../../app/stylesheets/custom1.scss */
 #navigation {
   float: left;
   width: 960px;
   background: #333;
 }
 
-/* line 110, ../../../app/stylesheets/custom1.scss */
+/* line 114, ../../../app/stylesheets/custom1.scss */
 #navigation ul {
   margin: 0;
   padding: 0;
 }
 
-/* line 111, ../../../app/stylesheets/custom1.scss */
+/* line 115, ../../../app/stylesheets/custom1.scss */
 #navigation ul li {
   list-style-type: none;
   display: inline;
 }
 
-/* line 112, ../../../app/stylesheets/custom1.scss */
+/* line 116, ../../../app/stylesheets/custom1.scss */
 #navigation li a {
   display: block;
   float: left;
@@ -121,36 +136,38 @@ h2, h3 {
   border-right: 1px solid#fff;
 }
 
-/* line 113, ../../../app/stylesheets/custom1.scss */
+/* line 117, ../../../app/stylesheets/custom1.scss */
 #navigation li a:hover {
   background: #6f9a06;
+  text-shadow: #1225f6 1px 1px 1px;
 }
-/* line 113, ../../../app/stylesheets/custom1.scss */
+/* line 117, ../../../app/stylesheets/custom1.scss */
 #navigation li a:hover:active {
   background: #6f9a06;
 }
 
-/* line 114, ../../../app/stylesheets/custom1.scss */
+/* line 118, ../../../app/stylesheets/custom1.scss */
 #navigation ul li a.active {
   background: #6f9a06;
   font-weight: bold;
+  text-shadow: #000 1px 1px 1px;
 }
 
-/* line 117, ../../../app/stylesheets/custom1.scss */
+/* line 121, ../../../app/stylesheets/custom1.scss */
 #content {
   background-color: #6f9a06;
   clear: left;
   padding: 20px;
 }
 
-/* line 125, ../../../app/stylesheets/custom1.scss */
+/* line 129, ../../../app/stylesheets/custom1.scss */
 #content h2 {
   color: #000;
   font-size: 160%;
   margin: 0 0 .5em;
 }
 
-/* line 132, ../../../app/stylesheets/custom1.scss */
+/* line 136, ../../../app/stylesheets/custom1.scss */
 #footer {
   background: url(/images/footer_background.png) repeat;
   text-align: right;
@@ -158,29 +175,28 @@ h2, h3 {
   height: 1%;
 }
 
-/* line 140, ../../../app/stylesheets/custom1.scss */
+/* line 144, ../../../app/stylesheets/custom1.scss */
 #login_nav {
   position: absolute;
   top: 0px;
-  right: 185px;
   padding: 2px;
   font-size: 80%;
 }
 
-/* line 149, ../../../app/stylesheets/custom1.scss */
+/* line 152, ../../../app/stylesheets/custom1.scss */
 .footer {
-  font-color: #ffe6ff;
+  font-color: #e6ffe6;
   text-align: center;
   margin-left: auto;
   margin-right: auto;
 }
-/* line 154, ../../../app/stylesheets/custom1.scss */
+/* line 157, ../../../app/stylesheets/custom1.scss */
 .footer nav {
   float: none;
 }
 
 /*fancy input search*/
-/* line 159, ../../../app/stylesheets/custom1.scss */
+/* line 162, ../../../app/stylesheets/custom1.scss */
 input[type="password"], input[type="text"], input[type="file"], input[type="email"], input[type="tel"], textarea {
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -203,14 +219,14 @@ input[type="password"], input[type="text"], input[type="file"], input[type="emai
   font-size: 100%;
 }
 
-/* line 165, ../../../app/stylesheets/custom1.scss */
+/* line 168, ../../../app/stylesheets/custom1.scss */
 textarea {
   height: 6em;
   width: 500px;
 }
 
 /* Buttons */
-/* line 170, ../../../app/stylesheets/custom1.scss */
+/* line 173, ../../../app/stylesheets/custom1.scss */
 input[type="submit"] {
   -moz-border-radius: 6px;
   -webkit-border-radius: 6px;
@@ -275,7 +291,7 @@ input[type="submit"]:active, input[type="submit"]:active:visited {
   color: white;
 }
 
-/* line 171, ../../../app/stylesheets/custom1.scss */
+/* line 174, ../../../app/stylesheets/custom1.scss */
 button {
   -moz-border-radius: 6px;
   -webkit-border-radius: 6px;
@@ -341,28 +357,22 @@ button:active, button:active:visited {
 
 /* Navigation */
 /* Links */
-/* line 175, ../../../app/stylesheets/custom1.scss */
-a {
-  color: #ffe6ff;
-  text-decoration: none;
-}
-/* line 177, ../../../app/stylesheets/custom1.scss */
-a:hover {
-  color: #0e2346;
-  text-decoration: none;
-}
-/* line 178, ../../../app/stylesheets/custom1.scss */
-a:active {
-  color: #0e2346;
-  text-decoration: none;
-}
 /* line 179, ../../../app/stylesheets/custom1.scss */
-a:visited {
-  color: #ffe6ff;
+a {
+  color: #f6e312;
   text-decoration: none;
+}
+/* line 181, ../../../app/stylesheets/custom1.scss */
+a:hover {
+  color: #1225f6;
+  text-decoration: underline;
+}
+/* line 182, ../../../app/stylesheets/custom1.scss */
+a:visited {
+  color: #f6e312;
 }
 
-/* line 181, ../../../app/stylesheets/custom1.scss */
+/* line 184, ../../../app/stylesheets/custom1.scss */
 a.button {
   -moz-border-radius: 6px;
   -webkit-border-radius: 6px;
@@ -427,51 +437,52 @@ a.button:active, a.button:active:visited {
   color: white;
 }
 
-/* line 184, ../../../app/stylesheets/custom1.scss */
+/* line 187, ../../../app/stylesheets/custom1.scss */
 nav {
   float: right;
   white-space: nowrap;
 }
-/* line 187, ../../../app/stylesheets/custom1.scss */
+/* line 190, ../../../app/stylesheets/custom1.scss */
 nav ul {
   margin: 0;
   padding: 0;
 }
-/* line 190, ../../../app/stylesheets/custom1.scss */
+/* line 193, ../../../app/stylesheets/custom1.scss */
 nav ul li {
   list-style-type: none;
   display: inline-block;
   padding: 0.2em 0;
 }
-/* line 194, ../../../app/stylesheets/custom1.scss */
+/* line 197, ../../../app/stylesheets/custom1.scss */
 nav ul li a {
   padding: 0 5px;
   font-weight: bold;
 }
-/* line 197, ../../../app/stylesheets/custom1.scss */
+/* line 200, ../../../app/stylesheets/custom1.scss */
 nav ul li a:visited {
-  color: #ffe6ff;
+  color: #f6e312;
 }
-/* line 199, ../../../app/stylesheets/custom1.scss */
+/* line 202, ../../../app/stylesheets/custom1.scss */
 nav ul li a:hover {
+  color: #1225f6;
   text-decoration: underline;
 }
 
 /* rotator */
-/* line 203, ../../../app/stylesheets/custom1.scss */
+/* line 207, ../../../app/stylesheets/custom1.scss */
 .slideshow {
   height: 200px;
   width: 940px;
   margin: 0;
 }
 
-/* line 204, ../../../app/stylesheets/custom1.scss */
+/* line 208, ../../../app/stylesheets/custom1.scss */
 .slideshow img {
   padding: 0;
   background-color: #6f9a06;
 }
 
-/* line 207, ../../../app/stylesheets/custom1.scss */
+/* line 211, ../../../app/stylesheets/custom1.scss */
 #signup {
   height: 125px;
   right: 62px;
@@ -481,7 +492,7 @@ nav ul li a:hover {
   border: none;
 }
 
-/* line 216, ../../../app/stylesheets/custom1.scss */
+/* line 220, ../../../app/stylesheets/custom1.scss */
 #signup a {
   background-image: url("../../images/signup_button.png");
   background-position: left 0;
@@ -495,7 +506,7 @@ nav ul li a:hover {
   outline: none;
 }
 
-/* line 229, ../../../app/stylesheets/custom1.scss */
+/* line 233, ../../../app/stylesheets/custom1.scss */
 #signup a:hover {
   background-image: url("../../images/signup_button.png");
   background-position: left -125px;
@@ -503,7 +514,7 @@ nav ul li a:hover {
 }
 
 /* table-less forms */
-/* line 237, ../../../app/stylesheets/custom1.scss */
+/* line 241, ../../../app/stylesheets/custom1.scss */
 div.field_hidden input {
   display: none;
 }
@@ -541,25 +552,25 @@ div.actions input[type="submit"] {
   text-align: left;
   }  */
 /*Pretty table*/
-/* line 275, ../../../app/stylesheets/custom1.scss */
+/* line 279, ../../../app/stylesheets/custom1.scss */
 table.pretty {
   border-collapse: collapse;
   margin-bottom: 10px;
 }
 
-/* line 280, ../../../app/stylesheets/custom1.scss */
+/* line 284, ../../../app/stylesheets/custom1.scss */
 .pretty th {
   padding: 4px 10px;
   border-bottom-color: #5d8105;
   border-bottom-style: solid;
   border-bottom-width: medium;
 }
-/* line 286, ../../../app/stylesheets/custom1.scss */
+/* line 290, ../../../app/stylesheets/custom1.scss */
 .pretty td {
   padding: 4px 10px;
   border: solid 1px #5d8105;
 }
-/* line 289, ../../../app/stylesheets/custom1.scss */
+/* line 293, ../../../app/stylesheets/custom1.scss */
 .pretty .hidden {
   border: hidden;
   border-top: solid 1px #5d8105;
@@ -567,59 +578,59 @@ table.pretty {
   text-align: right;
   background: #d2fa72;
 }
-/* line 295, ../../../app/stylesheets/custom1.scss */
+/* line 299, ../../../app/stylesheets/custom1.scss */
 .pretty .price {
   text-align: right;
 }
-/* line 297, ../../../app/stylesheets/custom1.scss */
+/* line 301, ../../../app/stylesheets/custom1.scss */
 .pretty .total {
   text-align: right;
   border-top-color: #5d8105;
   border-top-style: double;
   border-top-width: thick;
 }
-/* line 305, ../../../app/stylesheets/custom1.scss */
+/* line 309, ../../../app/stylesheets/custom1.scss */
 .pretty th .current {
   padding-right: 18px;
   background-repeat: no-repeat;
   background-position: right center;
 }
-/* line 309, ../../../app/stylesheets/custom1.scss */
+/* line 313, ../../../app/stylesheets/custom1.scss */
 .pretty th .asc:after {
   content: "\25B2 \ ";
   text-shadow: #aaaaaa 1px 1px 1px;
 }
-/* line 312, ../../../app/stylesheets/custom1.scss */
+/* line 316, ../../../app/stylesheets/custom1.scss */
 .pretty th .desc:after {
   content: "\25BC \ ";
   text-shadow: #aaaaaa 1px 1px 1px;
 }
 
-/* line 317, ../../../app/stylesheets/custom1.scss */
+/* line 321, ../../../app/stylesheets/custom1.scss */
 tbody tr:nth-child(even) td, tbody tr.even td {
   background: #a4e409;
 }
 
 /* extras */
-/* line 321, ../../../app/stylesheets/custom1.scss */
+/* line 325, ../../../app/stylesheets/custom1.scss */
 .upper {
   text-transform: uppercase;
 }
 
 /* Round corners */
-/* line 325, ../../../app/stylesheets/custom1.scss */
+/* line 329, ../../../app/stylesheets/custom1.scss */
 .round {
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   border-radius: 5px;
 }
 
-/* line 330, ../../../app/stylesheets/custom1.scss */
+/* line 334, ../../../app/stylesheets/custom1.scss */
 #flash div {
   height: 30px;
 }
 
-/* line 334, ../../../app/stylesheets/custom1.scss */
+/* line 338, ../../../app/stylesheets/custom1.scss */
 #flash_notice, #flash_error, #flash_alert {
   -moz-border-radius: 0.5em;
   -webkit-border-radius: 0.5em;
@@ -638,25 +649,25 @@ tbody tr:nth-child(even) td, tbody tr.even td {
   width: 99%;
 }
 
-/* line 343, ../../../app/stylesheets/custom1.scss */
+/* line 347, ../../../app/stylesheets/custom1.scss */
 #flash_notice {
   background-color: #CFC;
   border: solid 1px #6C6;
 }
 
-/* line 347, ../../../app/stylesheets/custom1.scss */
+/* line 351, ../../../app/stylesheets/custom1.scss */
 #flash_error {
   background-color: #FCC;
   border: solid 1px #C66;
 }
 
-/* line 351, ../../../app/stylesheets/custom1.scss */
+/* line 355, ../../../app/stylesheets/custom1.scss */
 #flash_alert {
   background-color: #FFAB56;
   border: solid 1px #C66;
 }
 
-/* line 355, ../../../app/stylesheets/custom1.scss */
+/* line 359, ../../../app/stylesheets/custom1.scss */
 .field_with_errors {
   -moz-border-radius: 0.5em;
   -webkit-border-radius: 0.5em;
@@ -674,7 +685,7 @@ tbody tr:nth-child(even) td, tbody tr.even td {
   display: inline;
 }
 
-/* line 363, ../../../app/stylesheets/custom1.scss */
+/* line 367, ../../../app/stylesheets/custom1.scss */
 #error_explanation {
   -moz-border-radius: 0.5em;
   -webkit-border-radius: 0.5em;
@@ -693,7 +704,7 @@ tbody tr:nth-child(even) td, tbody tr.even td {
   margin-bottom: 20px;
   background-color: #6f9a06;
 }
-/* line 372, ../../../app/stylesheets/custom1.scss */
+/* line 376, ../../../app/stylesheets/custom1.scss */
 #error_explanation h2 {
   text-align: left;
   font-weight: bold;
@@ -703,17 +714,17 @@ tbody tr:nth-child(even) td, tbody tr.even td {
   background-color: #ff1616;
   color: #fff;
 }
-/* line 380, ../../../app/stylesheets/custom1.scss */
+/* line 384, ../../../app/stylesheets/custom1.scss */
 #error_explanation p {
   color: #333;
   margin-bottom: 0;
   padding: 8px;
 }
-/* line 384, ../../../app/stylesheets/custom1.scss */
+/* line 388, ../../../app/stylesheets/custom1.scss */
 #error_explanation ul {
   margin: 2px 24px;
 }
-/* line 386, ../../../app/stylesheets/custom1.scss */
+/* line 390, ../../../app/stylesheets/custom1.scss */
 #error_explanation ul li {
   font-size: 100%;
   list-style: disc;

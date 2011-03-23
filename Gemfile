@@ -7,15 +7,17 @@ gem 'rails', '3.0.4'
 
 gem 'mysql2'
 gem "haml-rails"
+#gem 'haml-edge'
 gem 'devise', '~>1.1.5'
 gem 'cancan'
-#gem "paperclip", "~> 2.3"
+#gem 'paperclip', '~> 2.3'
 gem 'kaminari'
 gem 'jquery-rails'
 gem 'rails3-jquery-autocomplete'
 gem "compass"
 gem 'fancy-buttons'
 gem 'active_link_to'
+
 
 
 group :development do
